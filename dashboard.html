@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Dashboard - Lunch Box</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffaa2b;
+      padding: 20px 40px;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      color: #1d3557;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    .container h2 {
+      font-size: 30px;
+      color: #1d3557;
+      margin-bottom: 10px;
+    }
+
+    .container p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .features {
+      display: flex;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 250px;
+      background: #fff8a6;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #1d3557;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+      }
+
+      .nav-links a {
+        margin: 0 15px 10px 0;
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo">Lunch Box</div>
+    <div class="nav-links">
+      <a href="dashboard.html">Home</a> <!-- Link to home (Customer Dashboard) -->
+      <a href="myorder.html">My Orders</a>
+      <a href="subscription.html">Subscription</a>
+      <a href="profile.html">Profile</a>
+      <a href="support.html">Support</a>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Welcome Back!</h2>
+    <p>Explore delicious meals and manage your tiffin subscriptions effortlessly.</p>
+
+    <div class="features">
+      <div class="card" onclick="location.href='explore.html'">
+        <h3>Explore meals</h3>
+        <p>Discover a variety of meal combinations crafted for your taste and health.</p>
+      </div>
+      <div class="card" onclick="location.href='track.html'">
+        <h3>Track Orders</h3>
+        <p>View order status, delivery times, and history in one place.</p>
+      </div>
+      <div class="card" onclick="location.href='subscription.html'">
+        <h3>My Subscription</h3>
+        <p>Manage your weekly or monthly tiffin plans easily.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

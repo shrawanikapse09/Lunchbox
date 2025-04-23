@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore Meals - Chef Next Door</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffaf1;
+      padding: 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffaa2b;
+      padding: 20px 40px;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      color: #1d3557;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      margin: 40px 0;
+      color: #e07a00;
+      font-family: 'Trebuchet MS', sans-serif;
+    }
+
+    .meal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 40px auto;
+      padding: 0 20px;
+    }
+
+    .meal-box {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .meal-box:hover {
+      transform: scale(1.03);
+    }
+
+    .meal-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .meal-content {
+      padding: 20px;
+    }
+
+    .meal-title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #1d3557;
+      margin-bottom: 10px;
+    }
+
+    .meal-desc {
+      font-size: 16px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+      }
+
+      .nav-links a {
+        margin: 0 15px 10px 0;
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Lunch Box</div>
+    <div class="nav-links">
+      <a href="dashboard.html">Home</a>
+      <a href="myorder.html">My Orders</a>
+      <a href="subscription.html">Subscription</a>
+      <a href="profile.html">Profile</a>
+      <a href="support.html">Support</a>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+
+  <h1>Explore Meal Combinations</h1>
+
+  <div class="meal-grid">
+    <div class="meal-box">
+      <img src="vegthali.jpeg" alt="Classic Veg Thali" class="meal-img" />
+      <div class="meal-content">
+        <div class="meal-title">Classic Veg Thali</div>
+        <div class="meal-desc">Includes roti, rice, dal, seasonal sabzi, salad, and pickle. Perfect for a healthy lunch.</div>
+        <div class="meal-desc">- by Ghar Ka Khana</div>
+      </div>
+    </div>
+
+    <div class="meal-box">
+      <img src="panjabi.jpeg" alt="Punjabi Feast" class="meal-img" />
+      <div class="meal-content">
+        <div class="meal-title">Punjabi Feast</div>
+        <div class="meal-desc">Butter paneer, jeera rice, naan, boondi raita, and gulab jamun for dessert.</div>
+        <div class="meal-desc">- by Punjabi Rasoi</div>
+      </div>
+    </div>
+
+    <div class="meal-box">
+      <img src="southindiann.jpeg" alt="South Indian Delight" class="meal-img" />
+      <div class="meal-content">
+        <div class="meal-title">South Indian Delight</div>
+        <div class="meal-desc">Idli, dosa, sambar, coconut chutney, and lemon rice for a flavorful journey.</div>
+        <div class="meal-desc">- by SaiKrishna Meals</div>
+      </div>
+    </div>
+
+    <div class="meal-box">
+      <img src="nonveg.jpeg" alt="Non Veg Thali" class="meal-img" />
+      <div class="meal-content">
+        <div class="meal-title">Non Veg Thali</div>
+        <div class="meal-desc">Chicken curry, jeera rice, roti, salad.</div>
+        <div class="meal-desc">- by Suruchi's Tiffin</div>
+      </div>
+    </div>
+
+    <div class="meal-box">
+      <img src="biryani.jpeg" alt="Weekend Special" class="meal-img" />
+      <div class="meal-content">
+        <div class="meal-title">Weekend Special</div>
+        <div class="meal-desc">Chicken biryani, raita, mint chutney, and sweet phirni. Served only on weekends!</div>
+        <div class="meal-desc">- by Raj Tiffin Services</div>
+      </div>
+    </div>
+
+    <div class="meal-box">
+      <img src="special.jpeg" alt="Special Meal" class="meal-img" />
+      <div class="meal-content">
+        <div class="meal-title">Special Meal</div>
+        <div class="meal-desc">Cheese paratha, mini uttapams, fruit salad, and a mini chocolate muffin.</div>
+        <div class="meal-desc">- by Soniya's Kitchen</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Chef Dashboard - Lunch Box</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffaa2b;
+      padding: 20px 40px;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      color: #1d3557;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    }
+
+    .container h2 {
+      font-size: 30px;
+      color: #1d3557;
+      margin-bottom: 10px;
+    }
+
+    .container p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .features {
+      display: flex;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 280px;
+      background: #fff8a6;
+      padding: 25px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #1d3557;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+      }
+
+      .nav-links a {
+        margin: 0 15px 10px 0;
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Lunch Box</div>
+    <div class="nav-links">
+      <a href="hdash.html">home</a>
+      <a href="order.html">Orders</a>
+      <a href="#">Menu</a>
+      <a href="cheffprofile.html">Profile</a>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>Hello, Chef! 👨‍🍳</h2>
+    <p>Manage your meals, orders, and deliveries — all from one place.</p>
+
+    <div class="features">
+      <div class="card">
+        <h3>Manage Orders</h3>
+        <p>View new orders, mark them complete, and keep track of delivery status.</p>
+      </div>
+      <div class="card">
+        <h3>Edit Menu</h3>
+        <p>Update your daily or weekly offerings and add mouth-watering dishes.</p>
+      </div>
+      <div class="card">
+        <h3>Stock & Inventory</h3>
+        <p>Track ingredients, plan your cooking needs, and reduce food waste.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

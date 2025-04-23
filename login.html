@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Lunch Box</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8a6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+    }
+
+    .login-box h2 {
+      color: #1d3557;
+      margin-bottom: 30px;
+    }
+
+    .login-box input,
+    .login-box select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ffaa2b;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-box button:hover {
+      background-color: #e0911a;
+    }
+
+    .role-select {
+      text-align: left;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .signup-link {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .signup-link a {
+      text-decoration: none;
+      color: #ffaa2b;
+    }
+
+    @media (max-width: 480px) {
+      .login-box {
+        width: 90%;
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>Login to Lunch Box</h2>
+    <form onsubmit="return handleLogin(event)">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+
+      <div class="role-select">Login as:</div>
+      <select id="role" required>
+        <option value="">-- Select Role --</option>
+        <option value="customer">Customer</option>
+        <option value="homechef">Home Chef</option>
+      </select>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="signup-link">
+      <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+
+      const role = document.getElementById('role').value;
+
+      if (role === "customer") {
+        window.location.href = "dashboard.html";
+      } else if (role === "homechef") {
+        window.location.href = "hdash.html";
+      } else {
+        alert("Please select a valid role.");
+      }
+    }
+  </script>
+
+</body>
+</html>
