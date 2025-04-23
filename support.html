@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support - Lunch Box</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      color: #ff7f00;
+      margin-bottom: 40px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffaa2b;
+      padding: 20px 40px;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: white;
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      color: #1d3557;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #1d3557;
+    }
+
+    .content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .contact-form button {
+      padding: 15px;
+      background-color: #ffaa2b;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #ff7f00;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+      }
+
+      .nav-links a {
+        margin: 0 15px 10px 0;
+        display: inline-block;
+      }
+
+      .content {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Lunch Box</div>
+    <div class="nav-links">
+      <a href="dashboard.html">Home</a>
+      <a href="myorder.html">My Orders</a>
+      <a href="subscription.html">Subscription</a>
+      <a href="profile.html">Profile</a>
+      <a href="support.html">Support</a>
+      <a href="logout.html">Logout</a>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <h2>Need Help? We're Here for You!</h2>
+    <p>If you have any questions, concerns, or issues, feel free to contact our support team. We're happy to assist you!</p>
+
+    <h3>Contact Us</h3>
+    <p>If you're experiencing any issues with your orders, subscriptions, or have other inquiries, please fill out the form below and our team will get back to you as soon as possible.</p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="6" placeholder="Describe your issue or inquiry..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+</body>
+</html>

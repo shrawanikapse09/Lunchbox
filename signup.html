@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Lunch Box</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8a6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .signup-box {
+      background-color: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+    }
+
+    .signup-box h2 {
+      color: #1d3557;
+      margin-bottom: 30px;
+    }
+
+    .signup-box input,
+    .signup-box select,
+    .signup-box textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .signup-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ffaa2b;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .signup-box button:hover {
+      background-color: #e0911a;
+    }
+
+    .role-select {
+      text-align: left;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .login-link {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .login-link a {
+      text-decoration: none;
+      color: #ffaa2b;
+    }
+
+    @media (max-width: 480px) {
+      .signup-box {
+        width: 90%;
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="signup-box">
+    <h2>Sign Up to Lunch Box</h2>
+    <form onsubmit="return handleSignup(event)">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="phone" placeholder="Phone Number" pattern="[0-9]{10}" title="Enter a 10-digit number" required />
+      <textarea id="address" placeholder="Address" rows="3" required></textarea>
+      <input type="password" id="password" placeholder="Password" required />
+      <input type="password" id="confirm-password" placeholder="Confirm Password" required />
+
+      <div class="role-select">Sign Up as:</div>
+      <select id="role" required>
+        <option value="">-- Select Role --</option>
+        <option value="customer">Customer</option>
+        <option value="homechef">Home Chef</option>
+      </select>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <div class="login-link">
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </div>
+
+  <script>
+    function handleSignup(event) {
+      event.preventDefault();
+
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      const role = document.getElementById('role').value;
+      
+      if (role === "customer") {
+        window.location.href = "dashboard.html";
+      } else if (role === "homechef") {
+        window.location.href = "hdash.html";
+      } else {
+        alert("Please select a valid role.");
+      }
+    }
+  </script>
+
+</body>
+</html>

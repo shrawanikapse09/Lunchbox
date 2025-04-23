@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Track Order - Lunch Box</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fffce0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #ffaa2b;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      display: inline;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .navbar ul li a:hover {
+      color: #1d1d1d;
+    }
+
+    h1 {
+      color: #e07a00;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .tracker-container {
+      max-width: 800px;
+      margin: 50px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding: 40px 20px;
+    }
+
+    .tracker-container::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      right: 5%;
+      height: 4px;
+      background-color: #ccc;
+      z-index: 0;
+    }
+
+    .step {
+      position: relative;
+      z-index: 1;
+      width: 120px;
+    }
+
+    .circle {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin: 0 auto 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    .step.active .circle {
+      background-color: #ffaa2b;
+    }
+
+    .step.done .circle {
+      background-color: #4caf50;
+    }
+
+    .label {
+      font-size: 14px;
+      color: #444;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Lunch Box</div>
+    <ul>
+      <li><a href="dashboard.html">Home</a></li>
+      <li><a href="myorder.html">My Orders</a></li>
+      <li><a href="subscription.html">Subscription</a></li>
+      <li><a href="profile.html">My Profile</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Tracker -->
+  <h1>Track Your Order</h1>
+
+  <div class="tracker-container">
+    <div class="step done">
+      <div class="circle">✓</div>
+      <div class="label">Order Placed</div>
+    </div>
+    <div class="step done">
+      <div class="circle">✓</div>
+      <div class="label">Being Prepared</div>
+    </div>
+    <div class="step active">
+      <div class="circle">3</div>
+      <div class="label">On the Way</div>
+    </div>
+    <div class="step">
+      <div class="circle">4</div>
+      <div class="label">Delivered</div>
+    </div>
+  </div>
+
+</body>
+</html>
